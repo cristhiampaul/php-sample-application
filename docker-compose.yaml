@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+
+  app:
+    image: cristhiampaul/php-app-clouxter:v1
+    ports:
+    - 80:80
+
+  mysql:
+    image: cristhiampaul/mysql-php-clouxter:v1
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: sample      
+      MYSQL_USER: sampleuser
+      MYSQL_PASSWORD: samplepass
