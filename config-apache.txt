@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+    ServerName test
+    DocumentRoot /usr/local/apache2/htdocs/web
+
+    <Directory /usr/local/apache2/htdocs>
+        Require all granted
+        AllowOverride all
+    </Directory>
+
+    php_admin_value include_path "/usr/local/apache2/htdocs/"
+
+    Include /usr/local/apache2/htdocs/config-dev/vhost.conf
+</VirtualHost>
+
